@@ -1,10 +1,5 @@
 class AtlysVotingMigration < ActiveRecord::Migration
   def change
-
-    drop_table :atlys_voting_questions
-    drop_table :atlys_voting_answers
-    drop_table :atlys_voting_votes
-
     create_table :atlys_voting_questions do |t|
       t.text :body
       t.integer :user_id
