@@ -25,11 +25,4 @@ class AtlysVotingMigration < ActiveRecord::Migration
     end
   end
 
-  def down
-    drop_table :atlys_voting_questions
-    drop_table :atlys_voting_answers
-    drop_table :atlys_voting_votes
-  end
-
-
 end
