@@ -3,6 +3,7 @@ require_dependency "atlys_voting/application_controller"
 module AtlysVoting
   class AnswersController < ApplicationController
     before_action :set_answer, only: [:show, :edit, :update, :destroy]
+    layout "admin", only: [:new]
 
     # GET /answers
     def index
