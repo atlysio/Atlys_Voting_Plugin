@@ -3,7 +3,7 @@ class CreateAtlysVotingVotes < ActiveRecord::Migration
     create_table :atlys_voting_votes do |t|
       t.integer :user_id
       t.string :ip
-      t.references :answer, index: true, foreign_key: true
+      t.references :atlys_voting_answer, index: true, foreign_key: true
 
       t.timestamps null: false
     end
