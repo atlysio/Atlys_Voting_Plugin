@@ -1,4 +1,6 @@
 AtlysVoting::Engine.routes.draw do
   resources :votes
-  root to: "votes#index"
+  resources :answers
+  resources :questions
+  root to: "questions#index"
 end

@@ -20,7 +20,7 @@ module AtlysVoting
 
     test "should create vote" do
       assert_difference('Vote.count') do
-        post :create, vote: { fromuser: @vote.fromuser, ip: @vote.ip }
+        post :create, vote: { answer_id: @vote.answer_id, ip: @vote.ip, user_id: @vote.user_id }
       end
 
       assert_redirected_to vote_path(assigns(:vote))
@@ -37,7 +37,7 @@ module AtlysVoting
     end
 
     test "should update vote" do
-      patch :update, id: @vote, vote: { fromuser: @vote.fromuser, ip: @vote.ip }
+      patch :update, id: @vote, vote: { answer_id: @vote.answer_id, ip: @vote.ip, user_id: @vote.user_id }
       assert_redirected_to vote_path(assigns(:vote))
     end
 

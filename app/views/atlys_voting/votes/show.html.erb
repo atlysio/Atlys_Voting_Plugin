@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Fromuser:</strong>
-  <%= @vote.fromuser %>
+  <strong>User:</strong>
+  <%= @vote.user_id %>
 </p>
 
 <p>
   <strong>Ip:</strong>
   <%= @vote.ip %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @vote.answer %>
 </p>
 
 <%= link_to 'Edit', edit_vote_path(@vote) %> |

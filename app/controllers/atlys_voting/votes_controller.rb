@@ -56,7 +56,7 @@ module AtlysVoting
 
       # Only allow a trusted parameter "white list" through.
       def vote_params
-        params.require(:vote).permit(:fromuser, :ip)
+        params.require(:vote).permit(:user_id, :ip, :answer_id)
       end
   end
 end
